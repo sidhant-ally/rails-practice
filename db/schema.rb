@@ -10,24 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_07_095017) do
+ActiveRecord::Schema.define(version: 2021_07_07_095433) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
     t.string "author"
     t.integer "year"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "marks", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "marks1"
+    t.integer "marks2"
+    t.integer "marks3"
   end
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.integer "roll_no"
+    t.integer "roll_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

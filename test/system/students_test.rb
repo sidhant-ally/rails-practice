@@ -15,7 +15,7 @@ class StudentsTest < ApplicationSystemTestCase
     click_on "New Student"
 
     fill_in "Name", with: @student.name
-    fill_in "Roll no", with: @student.roll_no
+    fill_in "Roll number", with: @student.roll_number
     click_on "Create Student"
 
     assert_text "Student was successfully created"
@@ -27,7 +27,7 @@ class StudentsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @student.name
-    fill_in "Roll no", with: @student.roll_no
+    fill_in "Roll number", with: @student.roll_number
     click_on "Update Student"
 
     assert_text "Student was successfully updated"
