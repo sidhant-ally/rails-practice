@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>MyApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -8,58 +9,56 @@
 
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="content">
-      <div class="header_right">
-        <div class="top_info">
-          <div class="top_info_right">
-            <p><b>You are not Logged in!</b> <a href="#">Log in</a> or <a href="#">register</a></p>
-          </div>
+        <div class="header_right">
+            <div class="top_info">
+                <div class="top_info_right">
+                    <p><b>You are not Logged in!</b> <a href="#">Log in</a> or <a href="#">register</a></p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <ul>
+                    <li><a href="/welcome/index">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/students">Students</a></li>
+                    <li><a href="/companies">Companies</a></li>
+                    <li><a href="/employees">Employees</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="bar">
-          <ul>
-            <li class="slogan">Website Content:</li>
-            <li><a href="/welcome/index">Home</a></li>
-            <li><a href="/books">Books</a></li>
-            <li><a href="/students">Students</a></li>
-            <li><a href="/books">Books</a></li>
-          </ul>
+        <div class="logo">
+            <h1><a href="#" title="The best music on the net!">My <span class="red">Application</span></a></h1>
+            <p>What shall we do today?</p>
         </div>
-      </div>
 
-      <div class="logo">
-        <h1><a href="#" title="The best music on the net!">My <span class="red">Application</span></a></h1>
-        <p>What shall we do today?</p>
-      </div>
+        <div class="search_field">
+            <form method="post" action="?">
+                <p><span class="grey">Search:</span>&nbsp;&nbsp;
+                    <input type="text" name="search" class="search" />
+                    <input type="submit" value="Go!" class="button" />
+                </p>
+            </form>
+        </div>
 
-      <div class="search_field">
-        <form method="post" action="?">
-          <p><span class="grey">Search:</span>&nbsp;&nbsp;
-            <input type="text" name="search" class="search" /> 
-            <input type="submit" value="Go!"class="button" />
-          </p>
-        </form>
-      </div>
+        <div class="newsletter">
+            <p>Subscribe for Newsletter!</p>
+        </div>
 
-      <div class="newsletter">
-        <p>Subscribe for Newsletter!</p>
-      </div>
+        <div class="subheader">
+        </div>
 
-      <div class="subheader">
-      </div>
+        <%= yield %>
 
-      <%= yield %>
-
-      <div class="footer">
-        <p><a href="#">RSS Feed</a> | <a href="#">Contact</a> | <a href="#">Accessibility</a> | <a
-            href="#">Products</a> | <a href="#">Disclaimer</a> | <a
-            href="#">CSS</a> and <a
-            href="#">XHTML</a><br />
-          &copy; Copyright 2021, Design: Paradox</p>
-      </div>
+        <div class="footer">
+            <p><a href="#">RSS Feed</a> | <a href="#">Contact</a> | <a href="#">Accessibility</a> | <a href="#">Products</a> | <a href="#">Disclaimer</a> | <a href="#">CSS</a> and <a href="#">XHTML</a><br />
+                &copy; Copyright 2021, Design: Paradox</p>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
